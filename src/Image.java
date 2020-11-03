@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class Image implements Element{
@@ -7,8 +8,10 @@ public class Image implements Element{
     Image(String name){
         this.imageName=name;
         try {
-            TimeUnit.SECONDS.sleep(4);
-        } catch (InterruptedException e) {
+            TimeUnit.SECONDS.sleep(2);
+            ImageLoaderFactory.create(name);
+
+        } catch (InterruptedException | IOException e) {
             e.printStackTrace();
         }
     }

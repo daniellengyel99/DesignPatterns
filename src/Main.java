@@ -20,6 +20,10 @@ public class Main {
         System.out.println();
         System.out.println("Printing with Alignment");
         System.out.println();
+
+        ImageProxy image1=new ImageProxy("./stock.jpg");
+        cap1.add(image1);
+
         cap1.print();
     }
 
