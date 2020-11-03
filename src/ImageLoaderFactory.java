@@ -11,8 +11,9 @@ public class ImageLoaderFactory {
         }
         else if (url.toLowerCase().endsWith("png")) {
             PNGImageLoader.load(url);
+        }else {
+            throw new RuntimeException("Unsupported format: " + url);
         }
-        throw new RuntimeException("Unsupported format: " + url);
     }
 
 }
