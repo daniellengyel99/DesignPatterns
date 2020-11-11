@@ -1,11 +1,20 @@
+package models;
+
+import services.AlignStrategy;
+
 public class Paragraph implements Element{
 
     private String name;
     private AlignStrategy alignStrategy;
 
-    Paragraph(String name){
+    public Paragraph(String name){
         this.name=name;
     }
+
+    public void accept(Visitor v) {
+        v.visit(this);
+    }
+
 
     public void print(){
 

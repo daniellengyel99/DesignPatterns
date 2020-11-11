@@ -1,3 +1,5 @@
+package services;
+
 import java.io.IOException;
 
 public interface ImageLoader {

@@ -1,3 +1,5 @@
+package services;
+
 import java.io.IOException;
 
 public class ImageLoaderFactory {
@@ -15,5 +17,4 @@ public class ImageLoaderFactory {
             throw new RuntimeException("Unsupported format: " + url);
         }
     }
-
 }

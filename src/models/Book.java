@@ -1,12 +1,14 @@
+package models;
+
 import java.util.ArrayList;
 
-public class Book {
+public class Book{
 
     private String title;
     private ArrayList<Element> content = new ArrayList<>();
     private ArrayList<Author> authors = new ArrayList<>();
 
-    Book(String title){
+    public Book(String title){
         this.title=title;
     }
 
@@ -19,13 +21,12 @@ public class Book {
     }
 
     public void print(){
-        System.out.println("Book title: "+this.title);
+        System.out.println("models.Book title: "+this.title);
         printAuthors();
         for(Element i:content){
             i.print();
         }
     }
-
 
     private void printAuthors(){
         for (Author i: authors){

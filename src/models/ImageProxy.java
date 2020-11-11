@@ -1,11 +1,18 @@
+package models;
+
 public class ImageProxy implements Element{
 
     private String name;
     Image realImage=null;
 
-    ImageProxy(String name){
+    public ImageProxy(String name){
         this.name=name;
     }
+
+    public void accept(Visitor v) {
+        v.visit(this);
+    }
+
 
     public void print() {
         if(realImage==null){
