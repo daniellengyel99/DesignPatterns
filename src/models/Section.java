@@ -38,5 +38,4 @@ public class Section implements Element{
             i.print();
         }
     }
-
 }

@@ -10,13 +10,13 @@ public class Image implements Element{
 
     public Image(String name){
         this.imageName=name;
-//        try {
-//            TimeUnit.SECONDS.sleep(2);
-//            ImageLoaderFactory.create(name);
-//
-//        } catch (InterruptedException | IOException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            TimeUnit.SECONDS.sleep(2);
+            ImageLoaderFactory.create(name);
+
+        } catch (InterruptedException | IOException e) {
+            e.printStackTrace();
+        }
     }
     public void accept(Visitor v) {
         v.visit(this);

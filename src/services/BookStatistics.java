@@ -4,7 +4,12 @@ import models.*;
 
 public class BookStatistics implements Visitor {
 
-    int paragraphs=0,sections=0,imageproxy=0,images=0,tables=0;
+    int paragraphs=0,sections=0,imageproxy=0,images=0,tables=0,book=0;
+
+    @Override
+    public void visit(Book b) {
+        book++;
+    }
 
     @Override
     public void visit(Section s) {
@@ -32,6 +37,6 @@ public class BookStatistics implements Visitor {
     }
 
     public void printStatistics(){
-        System.out.println("Sections: "+sections+"\nparagraphs: "+paragraphs+"\nimages: "+images+"\nimageproxy: "+imageproxy+"\ntables: "+tables);
+        System.out.println("Books: "+book+"\nSections: "+sections+"\nparagraphs: "+paragraphs+"\nimages: "+images+"\nimageproxy: "+imageproxy+"\ntables: "+tables);
     }
 }
