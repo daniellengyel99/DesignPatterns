@@ -8,10 +8,10 @@ public class FileSizes implements Visitor{
         totalSize+=5;
     }
     public void visit(Mp3 mp3) {
-        totalSize+=45;
+        totalSize+=3000;
     }
     public void visit(Svg svg) {
-        totalSize+=3000;
+        totalSize+=45;
     }
 
     public void visit(Director director){
