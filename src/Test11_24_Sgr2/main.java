@@ -1,7 +1,5 @@
 package Test11_24_Sgr2;
 
-import java.io.File;
-
 public class main {
 
     public static void main(String[]args){
