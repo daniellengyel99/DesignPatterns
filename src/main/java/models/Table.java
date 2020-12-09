@@ -13,7 +13,7 @@ public class Table implements Element{
     }
 
     public void print(){
-        System.out.println("models.Table with name: "+this.name);
+        System.out.println("main.java.models.Table with name: "+this.name);
     }
 
 }

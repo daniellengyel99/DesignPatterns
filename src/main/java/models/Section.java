@@ -33,7 +33,7 @@ public class Section implements Element{
     }
 
     public void print(){
-        System.out.println("models.Section: "+this.sectionTitle);
+        System.out.println("main.java.models.Section: "+this.sectionTitle);
         for(Element i : content){
             i.print();
         }

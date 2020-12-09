@@ -1,7 +1,5 @@
 package Test11_24_Sgr2;
 
-import services.AlignStrategy;
-
 public class Txt implements Element{
 
     private String name;

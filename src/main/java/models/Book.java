@@ -1,5 +1,7 @@
 package models;
 
+import models.Author;
+
 import java.util.ArrayList;
 
 public class Book{
@@ -21,7 +23,7 @@ public class Book{
     }
 
     public void print(){
-        System.out.println("models.Book title: "+this.title);
+        System.out.println("main.java.models.Book title: "+this.title);
         printAuthors();
         for(Element i:content){
             i.print();

@@ -23,7 +23,7 @@ public class Image implements Element{
     }
 
     public void print(){
-        System.out.println("models.Image with name: "+this.imageName);
+        System.out.println("main.java.models.Image with name: "+this.imageName);
     }
 
 }

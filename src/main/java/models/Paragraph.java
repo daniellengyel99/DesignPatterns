@@ -1,6 +1,6 @@
 package models;
 
-import services.AlignStrategy;
+import services.*;
 
 public class Paragraph implements Element{
 

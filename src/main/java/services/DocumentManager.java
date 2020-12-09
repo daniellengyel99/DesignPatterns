@@ -1,10 +1,10 @@
 package services;
 
-import models.Book;
+import models.*;
 
 public class DocumentManager {
 
-    public static DocumentManager instance;
+    private static DocumentManager instance;
     private static Book book;
 
     private DocumentManager(){};
