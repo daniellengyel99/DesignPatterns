@@ -1,10 +1,11 @@
 package models;
 
-import javax.persistence.Entity;
+import lombok.NoArgsConstructor;
+import javax.persistence.*;
 
+@NoArgsConstructor(force = true)
 @Entity
 public class Author {
-
     private String name;
 
     public Author(String name){

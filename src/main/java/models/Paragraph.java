@@ -1,7 +1,12 @@
 package models;
 
+import lombok.NoArgsConstructor;
 import services.*;
 
+import javax.persistence.*;
+
+@NoArgsConstructor(force = true)
+@Entity
 public class Paragraph implements Element{
 
     private String name;

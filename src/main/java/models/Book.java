@@ -1,13 +1,22 @@
 package models;
 
-import models.Author;
 
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.NoArgsConstructor;
+import javax.persistence.*;
 import java.util.ArrayList;
 
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+@NoArgsConstructor(force = true)
+@Entity
 public class Book{
-
+    @Column
     private String title;
+
     private ArrayList<Element> content = new ArrayList<>();
+    
+    @ManyToMany(cascade = CascadeType.ALL)
     private ArrayList<Author> authors = new ArrayList<>();
 
     public Book(String title){
@@ -23,7 +32,7 @@ public class Book{
     }
 
     public void print(){
-        System.out.println("main.java.models.Book title: "+this.title);
+        System.out.println("Book title: "+this.title);
         printAuthors();
         for(Element i:content){
             i.print();

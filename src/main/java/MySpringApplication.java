@@ -1,4 +1,6 @@
-package Lab10example;
+import Lab10example.ClientComponent;
+import Lab10example.SingletonComponent;
+import Lab10example.TransientComponent;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -25,5 +27,7 @@ public class MySpringApplication {
         c.operation();
         c = (ClientComponent)context.getBean("clientComponent");
         c.operation();
+
+
     }
 }

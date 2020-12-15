@@ -1,5 +1,11 @@
 package models;
 
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+
+@NoArgsConstructor(force = true)
+@Entity
 public class ImageProxy implements Element{
 
     private String name;

@@ -1,5 +1,10 @@
 package models;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
+
+@NoArgsConstructor(force = true)
+@Entity
 public class Table implements Element{
 
     private String name;

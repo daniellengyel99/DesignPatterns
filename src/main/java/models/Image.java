@@ -1,9 +1,13 @@
 package models;
+import lombok.NoArgsConstructor;
 import services.ImageLoaderFactory;
 
+import javax.persistence.Entity;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+@NoArgsConstructor(force = true)
+@Entity
 public class Image implements Element{
 
     private String imageName;

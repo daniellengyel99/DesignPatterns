@@ -1,10 +1,17 @@
 package models;
 
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
 import java.util.ArrayList;
 
+@NoArgsConstructor(force = true)
+@Entity
 public class Section implements Element{
 
     protected String sectionTitle;
+
+    @OneToMany(targetEntity = BaseElement.class, cascade = CascadeType.ALL)
     protected ArrayList<Element> content = new ArrayList<>();
 
     public Section(String sectionTitle){
