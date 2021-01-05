@@ -19,21 +19,24 @@ public class Lab11 {
         cap1.add(new Paragraph("Some text"));
         cap1.add(new Table("Table 1"));
 
+        cap1.print();
+        System.out.println("\n");
+
         FirstObserver firstObserver = new FirstObserver();
         SecondObserver secondObserver = new SecondObserver();
         cap1.addObserver(firstObserver);
         cap1.addObserver(secondObserver);
-
         p1.addObserver(firstObserver);
         p1.addObserver(secondObserver);
         p2.addObserver(firstObserver);
-
         cap1.setNewValue("CHAPTER 1");
         p1.setNewValue("PARAGRAPH 2");
         p2.setNewValue("PARAGRAPH 3");
-
         cap1.removeObserver(firstObserver);
         cap1.setNewValue("CHAPTER 1.1");
+
+        cap1.print();
     }
+
 
 }
