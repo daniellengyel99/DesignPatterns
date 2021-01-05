@@ -44,6 +44,5 @@ public class Table implements Element, Observable {
 
     @Override
     public void notifyObservers() {
-
     }
 }
