@@ -41,6 +41,7 @@ public class Paragraph implements Element,Observable{
     public void setNewValue(String newValue) {
         oldName=name;
         name=newValue;
+        notifyObservers();
     }
 
     @Override
@@ -55,6 +56,8 @@ public class Paragraph implements Element,Observable{
 
     @Override
     public void notifyObservers() {
-
+        for(Observer i:observerList){
+            i.update(oldName,name);
+        }
     }
 }

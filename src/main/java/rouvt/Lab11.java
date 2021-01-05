@@ -19,9 +19,6 @@ public class Lab11 {
         cap1.add(new Paragraph("Some text"));
         cap1.add(new Table("Table 1"));
 
-        cap1.print();
-        System.out.println("\n");
-
         FirstObserver firstObserver = new FirstObserver();
         SecondObserver secondObserver = new SecondObserver();
         cap1.addObserver(firstObserver);
@@ -35,7 +32,6 @@ public class Lab11 {
         cap1.removeObserver(firstObserver);
         cap1.setNewValue("CHAPTER 1.1");
 
-        cap1.print();
     }
 
 

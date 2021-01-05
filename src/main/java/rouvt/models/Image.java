@@ -44,6 +44,7 @@ public class Image implements Element, Observable {
     @Override
     public void addObserver(Observer obs) {
         observerList.add(obs);
+        notifyObservers();
     }
 
     @Override
@@ -53,6 +54,8 @@ public class Image implements Element, Observable {
 
     @Override
     public void notifyObservers() {
-
+        for(Observer i:observerList){
+            i.update(oldimageName,imageName);
+        }
     }
 }

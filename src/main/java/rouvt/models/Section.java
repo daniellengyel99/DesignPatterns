@@ -54,6 +54,7 @@ public class Section implements Element, Observable {
     public void setNewValue(String newValue) {
         this.oldsectionTitle=sectionTitle;
         sectionTitle=newValue;
+        notifyObservers();
     }
 
     @Override
@@ -68,6 +69,8 @@ public class Section implements Element, Observable {
 
     @Override
     public void notifyObservers() {
-
+        for(Observer i:observerList){
+            i.update(oldsectionTitle,sectionTitle);
+        }
     }
 }

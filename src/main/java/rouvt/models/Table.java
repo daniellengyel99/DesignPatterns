@@ -30,6 +30,7 @@ public class Table implements Element, Observable {
     public void setNewValue(String newValue) {
         this.oldName=this.name;
         this.name=newValue;
+        notifyObservers();
     }
 
     @Override
@@ -44,5 +45,8 @@ public class Table implements Element, Observable {
 
     @Override
     public void notifyObservers() {
+        for(Observer i:observerList){
+            i.update(oldName,name);
+        }
     }
 }
