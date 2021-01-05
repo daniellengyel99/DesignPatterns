@@ -18,7 +18,7 @@ public class Book{
     private ArrayList<Element> content = new ArrayList<Element>();
     
     @ManyToMany(cascade = CascadeType.ALL)
-    private ArrayList<Author> authors = new ArrayList<Author>();
+    private ArrayList<Author> authors = new ArrayList<>();
 
     public Book(String title){
         this.title=title;

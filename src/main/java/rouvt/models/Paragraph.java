@@ -4,12 +4,16 @@ import lombok.NoArgsConstructor;
 import rouvt.services.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 
 @NoArgsConstructor(force = true)
 @Entity
-public class Paragraph implements Element{
+public class Paragraph implements Element,Observable{
 
     private String name;
+    private String oldName;
+    private ArrayList<Observer> observerList=new ArrayList<>();
+
     private AlignStrategy alignStrategy;
 
     public Paragraph(String name){
@@ -19,7 +23,6 @@ public class Paragraph implements Element{
     public void accept(Visitor v) {
         v.visit(this);
     }
-
 
     public void print(){
 
@@ -34,4 +37,24 @@ public class Paragraph implements Element{
         this.alignStrategy=alignStrategy;
     }
 
+    @Override
+    public void setNewValue(String newValue) {
+        oldName=name;
+        name=newValue;
+    }
+
+    @Override
+    public void addObserver(Observer obs) {
+        observerList.add(obs);
+    }
+
+    @Override
+    public void removeObserver(Observer obs) {
+        observerList.remove(obs);
+    }
+
+    @Override
+    public void notifyObservers() {
+
+    }
 }

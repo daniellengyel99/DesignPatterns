@@ -21,4 +21,9 @@ public class BaseElement implements Element{
     public void accept(Visitor visitor) {
 
     }
+
+    @Override
+    public void setNewValue(String newValue) {
+
+    }
 }

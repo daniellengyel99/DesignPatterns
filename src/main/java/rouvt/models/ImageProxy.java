@@ -20,6 +20,11 @@ public class ImageProxy implements Element{
         v.visit(this);
     }
 
+    @Override
+    public void setNewValue(String newValue) {
+
+    }
+
 
     public void print() {
         if(realImage==null){
