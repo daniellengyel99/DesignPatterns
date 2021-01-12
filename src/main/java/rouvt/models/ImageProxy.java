@@ -10,6 +10,7 @@ public class ImageProxy implements Element{
 
     @Id
     private String name;
+    @Transient
     Image realImage=null;
 
     public ImageProxy(String name){

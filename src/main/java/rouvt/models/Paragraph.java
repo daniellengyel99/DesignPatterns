@@ -5,15 +5,19 @@ import rouvt.services.*;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @NoArgsConstructor(force = true)
 @Entity
 public class Paragraph implements Element,Observable{
 
+    @Id
     private String name;
     private String oldName;
-    private ArrayList<Observer> observerList=new ArrayList<>();
+    @Transient
+    private List<Observer> observerList=new ArrayList<>();
 
+    @Transient
     private AlignStrategy alignStrategy;
 
     public Paragraph(String name){

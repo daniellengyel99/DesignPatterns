@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 @NoArgsConstructor(force = true)
 @Entity
+@javax.persistence.Table(name = "bTable")
 public class Table implements Element, Observable {
 
     @Id

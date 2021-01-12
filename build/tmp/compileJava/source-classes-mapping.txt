@@ -40,8 +40,6 @@ rouvt/models/Observer.java
  rouvt.models.Observer
 rouvt/Test11_24_Sgr2/Txt.java
  rouvt.Test11_24_Sgr2.Txt
-rouvt/Lab10example/Application.java
- rouvt.Lab10example.Application
 rouvt/services/JPGImageLoader.java
  rouvt.services.JPGImageLoader
 rouvt/Test11_24_Sgr2/Svg.java
@@ -50,6 +48,8 @@ rouvt/models/Table.java
  rouvt.models.Table
 rouvt/services/BMPImageLoader.java
  rouvt.services.BMPImageLoader
+rouvt/Application.java
+ rouvt.Application
 rouvt/Test11_24_Sgr2/Director.java
  rouvt.Test11_24_Sgr2.Director
 rouvt/Lab6Main.java

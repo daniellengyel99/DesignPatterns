@@ -6,19 +6,20 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @NoArgsConstructor(force = true)
+@Access(AccessType.PROPERTY)
 @Entity
 public class Book{
-    @Column
-    @Id
+    private int id;
+
     private String title;
 
-    private ArrayList<Element> content = new ArrayList<Element>();
-    
-    @ManyToMany(cascade = CascadeType.ALL)
-    private ArrayList<Author> authors = new ArrayList<>();
+    private List<Element> content = new ArrayList<>();
+
+    private List<Author> authors = new ArrayList<>();
 
     public Book(String title){
         this.title=title;
@@ -38,6 +39,25 @@ public class Book{
         for(Element i:content){
             i.print();
         }
+    }
+
+    public void setAuthors(List<Author> authors) {
+        this.authors = authors;
+    }
+
+    @ManyToMany(targetEntity = Author.class)
+    public List<Author> getAuthors() {
+        return authors;
+    }
+
+    @Column
+    @Id
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     private void printAuthors(){

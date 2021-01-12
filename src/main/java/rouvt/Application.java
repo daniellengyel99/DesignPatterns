@@ -1,4 +1,4 @@
-package rouvt.Lab10example;
+package rouvt;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
